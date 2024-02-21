@@ -10,36 +10,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-let buttonDiv = document.createElement("div");
-buttonDiv.classList.add("btdiv");
 
-let button1 = createButton("Product Information", "color1");
-let button2 = createButton("Product Description", "color2");
-
-buttonDiv.appendChild(button1);
-buttonDiv.appendChild(button2);
-document.body.appendChild(buttonDiv);
-
-let lastContent = document.createElement("p");
-lastContent.classList.add("lastcont");
-lastContent.innerHTML = "Product Description Additional Info Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. simply cause by price ";
-document.body.appendChild(lastContent);
-
-buttonDiv.addEventListener("click", function(event) {
-    if (event.target.tagName === "BUTTON") {
-        button1.classList.toggle("color1", event.target === button1);
-        button2.classList.toggle("color2", event.target === button2);
-    }
-});
-
-function createButton(text, colorClass) {
-    let button = document.createElement("button");
-    button.textContent = text;
-    button.classList.add("btn", colorClass);
-    return button;
+let Mybuttonplus = document.getElementById("last-button");
+let numero = document.getElementById("numb");
+let counter = 0;
+Mybuttonplus.addEventListener("click", plus);
+function plus() {
+  numero.innerHTML = ++counter;
 }
 
+let lastcontent = document.createElement("p")
+let buttondiv = document.createElement("div")
+let button1 = document.createElement("button");
 
 
+button1.textContent = "Product Information";
+button1.classList.add("btn1","color1");
+buttondiv.classList.add("btdiv")
+lastcontent.classList.add("lastcont")
+
+let button2 = document.createElement("button");
+button2.textContent = "Product Information";
+button2.classList.add("btn2","color2");
+lastcontent.innerHTML="Product DescriptionAdditional InfoWelcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. simply couse by price ";
+
+buttondiv.appendChild(button1)
+buttondiv.appendChild(button2)
+document.body.appendChild(buttondiv)
+document.body.appendChild(lastcontent)
 
 
+button1.addEventListener("click", function() {
+    button1.classList.remove("color1"); 
+    button1.classList.add("color2"); 
+    button2.classList.remove("color2"); 
+    button2.classList.add("color1");
+});
+
+button2.addEventListener("click", function() {
+    button2.classList.remove("color1");
+    button2.classList.add("color2"); 
+    button1.classList.remove("color2"); 
+    button1.classList.add("color1");
+});

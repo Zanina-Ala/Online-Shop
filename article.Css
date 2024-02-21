@@ -71,6 +71,7 @@ font-size: 3rem;
 }
 .stars {
     width: 4rem;
+    margin-left: 0.5rem;
 }
 #product-description{
     color: #a9aeb0;

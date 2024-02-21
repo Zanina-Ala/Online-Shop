@@ -1,21 +1,22 @@
-body {
+body{
     font-family: Arial, Helvetica, sans-serif;
     color: #274c5b;
     font-weight: bold;
 }
 
-.header-logo {
-    width: 4rem;
+.h-logo{
+    width: 3rem;
 }
 
-header {
+header{
     display: flex;
     justify-content: space-between;
     margin-left: 4.5rem;
     margin-right: 4rem;
+    
 }
 
-.header-container, .nav-links-container, .cart-search-container {
+.h1, .h2, .h3 {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -26,23 +27,33 @@ header {
     color: #274c5b;
 }
 
-.icon-container {
+.h3 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon {
     display: flex;
     align-items: center;
     border: 1px solid black;
-    padding: 2px 50px 0 0;
+    padding: 2px 50px 0 0 ;
     padding-bottom: 1px;
     border-radius: 2rem;
     border-color: #f0f0f0;
     gap: 10px;
 }
 
-span:hover {
+span:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-.banner-up {
+.h3 {
+    cursor: pointer;
+}
+
+.banner-up{
     margin-top: 3rem;
     width: 100%;
     height: 25rem;
@@ -50,7 +61,7 @@ span:hover {
     z-index: 1;
 }
 
-.title {
+.titre {
     position: absolute;
     z-index: 2;
     color: white;
@@ -59,17 +70,17 @@ span:hover {
     font-size: 3.5rem;
 }
 
-#work-container {
+#workdiv {
     position: relative;
     z-index: 2;
     margin-top: 40rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: repeat(3,auto);
     margin-left: 3rem;
 }
 
-.product-container {
+.productdiv {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -80,15 +91,17 @@ span:hover {
     background-color: #f9f8f8;
     margin: 10px 20px;
     cursor: pointer;
-    transition: background-color 2s ease;
+    transition: background-color 2s ease ;
 }
-
-.product-container:hover {
-    background-color: #274c5b;
+.productdiv:hover{
+    background-color:#6d6d6d;
     color: white;
 }
 
-.product-image {
+
+
+
+.imageprod {
     width: 15rem;
     height: 18rem;
     margin-top: 4rem;
@@ -101,74 +114,75 @@ span:hover {
     margin-top: 7px;
 }
 
-.product-category {
+.category {
     position: absolute;
     z-index: 2;
     color: white;
     margin-left: 1.3rem;
+    
+    
 }
 
 .buy {
     width: 2.5rem;
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     margin-left: 12rem;
     margin-top: 6px;
+   
 }
+.title {
+   
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
 
-.product-title {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.context-container {
+.context{
     display: flex;
-}
 
-.stars {
+}
+.stars{
     width: 5rem;
-    margin-left: 5rem;
+    margin-left: 1rem ;
 }
-
-.banner-down {
+ .banner-down{
     margin-top: 3rem;
     width: 80%;
     height: 20rem;
     position: absolute;
     z-index: 1;
     border-radius: 30px;
-    margin-top: 5rem;
+    margin-top: 5rem;   
     margin-left: 9rem;
 }
-
-.subscribe-container {
+.c3{
     width: 65rem;
     color: white;
     display: flex;
     position: absolute;
     z-index: 2;
-    justify-content: space-between;
+    justify-content:space-between;
     margin-top: 11rem;
     margin-left: 15rem;
     align-items: center;
     border: none;
+   
+   
 }
 
-.subscribe-title {
+.sub{
     font-size: 2.3rem;
 }
-
-.email-input {
+.in1{
     height: 4rem;
     width: 15rem;
     border-radius: 10px;
     border: none;
-    color: gray;
-    cursor: pointer;
+   color: gray;
+   cursor: pointer;
 }
-
-.subscribe-button {
+.in2{
     height: 4.4rem;
     width: 9rem;
     border-radius: 10px;
@@ -178,108 +192,63 @@ span:hover {
     cursor: pointer;
     transition: background-color 1s ease;
     font-weight: bold;
+    
+    
 }
-
-.subscribe-button:hover {
-    background-color: #12759c;
+.in2:hover{
+   background-color: #133575;
+    
 }
-
-.subscribe-button:active {
+.in2:active{
     font-size: 1rem;
-}
-
-.final-container {
+    
+ }
+ .finalcontainer{
     margin-top: 30rem;
     display: flex;
     justify-content: center;
     gap: 4rem;
-}
 
-.contact-info-container {
+ }
+ .partie1{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
     box-shadow: 1px 0 #c3c3c3;
     padding-right: 3rem;
-}
-
-.about-us-container {
+ }
+ .partie2{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
-
-.utility-pages-container {
+ }
+ .partie3{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     box-shadow: -1px 0 #c3c3c3;
     padding-left: 3rem;
-}
-
-.footer-logo {
+ }
+ .mm{
     width: 2rem;
-}
-
-.social-media-icon {
-    width: 2.5rem;
-}
-
-.contact-text {
+ }
+ .sm{
+    width:2.5rem ;
+ }
+ .cont{
     color: #b1b6b7;
     font-weight: 300;
     font-size: 15px;
-}
-
-.logo-text {
+ }
+ .log{
     font-weight: bold;
     font-size: 1.9rem;
-}
-
-.last-logo-container {
+ }
+ .lastlogo{
     align-items: center;
     display: flex;
     gap: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .header-container, .nav-links-container, .cart-search-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .icon-container {
-        padding: 2px 20px 0 0;
-    }
-
-    .title {
-        margin-left: 30%;
-        font-size: 2.5rem;
-    }
-
-    #work-container {
-        margin-top: 20rem;
-        margin-left: 1rem;
-    }
-
-    .product-container {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .product-image {
-        width: 100%;
-        height: auto;
-        margin-top: 1rem;
-    }
-}
+ }
